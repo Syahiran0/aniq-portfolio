@@ -1,7 +1,7 @@
 {
   "site": {
     "title": "Aniq Ihtisyam Syahiran — AI & Full-Stack Engineer",
-    "description": "Portfolio of Aniq Ihtisyam Syahiran: AI and full-stack engineer, three-time Gold Award winner and team lead of a national-level AI infrastructure project.",
+    "description": "Portfolio of Aniq Ihtisyam Syahiran: AI and full-stack engineer, Google AI Ambassador, three-time Gold Award winner and team lead of a national-level AI infrastructure project.",
     "sections": {
       "stats": true,
       "about": true,
@@ -20,11 +20,11 @@
     "name": "Aniq Ihtisyam Syahiran",
     "firstName": "Aniq",
     "role": "AI & Full-Stack Engineer",
-    "location": "Shah Alam, Malaysia",
+    "location": "Shah Alam, Selangor, Malaysia",
     "email": "aniqihtisyam4@gmail.com",
     "phone": "",
     "linkedin": "https://www.linkedin.com/in/ihtisyamsyahiran",
-    "github": "",
+    "github": "https://github.com/Syahiran0",
     "photo": "",
     "resumeUrl": "",
     "availability": "Open to software & AI engineering roles"
@@ -36,15 +36,15 @@
     "lead": "I build",
     "highlight": "AI products",
     "tail": "that see, reason & ship.",
-    "sub": "Final-year Information Systems student at UiTM, three-time Gold Award winner and team lead of a national-level AI infrastructure project.",
+    "sub": "Final-year Information Systems student at UiTM, Google AI Ambassador and Gold Award winner (2× international, 1× national), leading a national-level AI infrastructure project.",
     "chipLabel": "AISe",
     "chipImage": "",
     "connectLabel": "Connect",
     "scrollHint": "Scroll to enter selected work"
   },
   "stats": [
-    { "value": "3×", "label": "Gold Award winner" },
-    { "value": "8", "label": "Awards & placements" },
+    { "value": "3×", "label": "Gold Awards · 2 international, 1 national" },
+    { "value": "9", "label": "Awards, placements & honours" },
     { "value": "3.65", "label": "CGPA · Dean's List" },
     { "value": "2,000+", "label": "Attendees reached as promotion lead" }
   ],
@@ -53,12 +53,12 @@
     "title": "I turn AI research into things people can actually use.",
     "stickerText": "Hi, this is me!",
     "paragraphs": [
-      "I'm a final-year Information Systems undergraduate at UiTM Shah Alam, specialising in AI and full-stack development. I build and deploy computer vision, LLM/RAG and agentic AI systems with Python, FastAPI, React.js and Docker, and I like taking them all the way to real hardware: Raspberry Pi edge devices, sensors and live demos in front of judges.",
-      "I lead AISe, a national-level AI infrastructure project, and I've won three Gold Awards (NISMEC 2026, iREx 2024, i-SIIDEC 2024). Outside the code I design and organise: media teams, promotions and contingent logistics for university-wide tournaments.",
-      "I'm looking for a software engineering or AI engineering role where I can ship things people use."
+      "I'm a final-year Information Systems undergraduate at UiTM Shah Alam (Big Data Track) and a Google AI Ambassador for UiTM. I build and deploy computer vision, LLM/RAG and agentic AI systems with Python, FastAPI, React.js and Docker, and I like taking them all the way to real hardware: Raspberry Pi edge devices, sensors and live demos in front of judges.",
+      "I lead AISe, an AI infrastructure platform that represented UiTM at Maker-Preneur National 2026, and I've won three Gold Awards: two international (iREx 2024, i-SIIDEC 2024) and one national (NISMEC 2026). Outside the code I design and organise: media teams, promotions and contingent logistics for university-wide sports events.",
+      "I'm passionate about building solutions that bridge practical needs with emerging technologies, and I'm looking for a software engineering or AI engineering role where I can ship things people use."
     ],
     "facts": [
-      { "label": "Based in", "value": "Shah Alam, Malaysia" },
+      { "label": "Based in", "value": "Shah Alam, Selangor, Malaysia" },
       { "label": "Studying", "value": "BSc Information Systems Engineering (Big Data), UiTM" },
       { "label": "CGPA", "value": "3.65 · Dean's List" },
       { "label": "Languages", "value": "English, Malay" }
@@ -71,17 +71,22 @@
       "subtitle": "Intelligent Infrastructure Management Platform",
       "role": "Team Lead",
       "period": "Maker-Preneur National 2026",
-      "summary": "An AI platform that detects potholes and road cracks from images, then turns detections into inspection reports, automated alerts and a chatbot that answers questions about past reports.",
+      "summary": "An AI platform that catches road damage early: potholes and cracks are detected from images, then turned into inspection reports, automated alerts and a chatbot that answers questions about past reports.",
       "bullets": [
         "Led team Half Genius, one of two UiTM teams selected for Maker-Preneur National 2026, while building the application and system and coordinating the team's workstreams.",
         "Detects potholes and road cracks with a trained YOLOv8 computer vision model, served by a FastAPI backend with a React.js interface.",
         "Integrated an LLM to generate inspection summaries and reports and send automated alerts via email and Telegram, plus a RAG-based chatbot for querying reports.",
-        "Ran the prototype on edge hardware (Raspberry Pi 5, Hailo AI accelerator, AI camera); pitched to judges and presented to the Deputy Secretary-General (Policy), Ministry of Higher Education."
+        "Ran the prototype on edge hardware (Raspberry Pi 5, Hailo AI accelerator, AI camera) in a 3D-printed enclosure; pitched to judges and presented to the Deputy Secretary-General (Policy), Ministry of Higher Education."
       ],
       "stack": ["Python", "YOLOv8", "FastAPI", "React.js", "LLM", "RAG", "Agentic AI", "Raspberry Pi 5", "Hailo AI Accelerator"],
       "cover": "",
       "accent": "#ff6a1f",
-      "links": []
+      "links": [
+        {
+          "label": "Read the UiTM NewsHub feature",
+          "url": "https://news.uitm.edu.my/2026/09/pasukan-half-genius-uitm-terpilih-ke-maker-preneur-national-2026/"
+        }
+      ]
     },
     {
       "id": "sentinel",
@@ -89,10 +94,10 @@
       "subtitle": "Final Year Project",
       "role": "Developer",
       "period": "2026 – 2027",
-      "summary": "Automated anomaly detection and workflow for infrastructure, combining computer vision with multi-agent LLMs.",
+      "summary": "Automated anomaly detection and workflow for infrastructure: multiple AI agents with different tasks and tools monitor infrastructure, detect anomalies and automate the response.",
       "bullets": [
         "Final Year Project for the BSc (Hons.) Information Systems Engineering (Big Data Track) at UiTM Shah Alam.",
-        "Automates anomaly detection and the follow-up workflow using computer vision and multi-agent LLMs."
+        "Combines computer vision with multi-agent LLMs: each agent has its own task and tools, so the system can monitor, detect anomalies and trigger responses automatically."
       ],
       "stack": ["Computer Vision", "Multi-Agent LLMs", "Python"],
       "cover": "",
@@ -115,6 +120,21 @@
       "stack": ["Arduino Nano", "ESP32", "MPU6050", "MAX30100", "FastAPI", "Gemma 3 (1B)", "React.js"],
       "cover": "",
       "accent": "#9b5cff",
+      "links": []
+    },
+    {
+      "id": "razorvation",
+      "title": "RazorVation",
+      "subtitle": "Diploma final-year project",
+      "role": "Final-year project",
+      "period": "iREx 2024 · Gold, Category C",
+      "summary": "The final-year project for my Diploma in Computer Science at UiTM Kedah, which won Gold in Category C (higher institutions) at the International Industrial Revolution 4.0 Exhibition (iREx) 2024.",
+      "bullets": [
+        "Presented with my team at iREx 2024 and awarded Gold in Category C, the category for higher institutions such as universities."
+      ],
+      "stack": [],
+      "cover": "",
+      "accent": "#e5532d",
       "links": []
     },
     {
@@ -183,8 +203,8 @@
       "id": "nismec-2026",
       "rank": "Gold",
       "title": "National Innovation & Sustainability Melati Challenge (NISMEC) 2026",
-      "date": "2026",
-      "description": "Gold Award at NISMEC 2026.",
+      "date": "Jun 2026",
+      "description": "National Gold Award at NISMEC 2026, organised by Kolej Kediaman Melati, UiTM.",
       "image": "",
       "accent": "#ff7a1a",
       "highlight": true
@@ -194,7 +214,7 @@
       "rank": "National",
       "title": "Maker-Preneur National 2026",
       "date": "Aug 2026",
-      "description": "UiTM representative: one of two UiTM teams selected for the national stage, leading team Half Genius with AISe and presenting to the Deputy Secretary-General (Policy), Ministry of Higher Education.",
+      "description": "One of only two UiTM teams on the national stage. Pitched at Universiti Malaya on 9 August and presented AISe to the Deputy Secretary-General (Policy), Ministry of Higher Education, on 10 August.",
       "image": "",
       "accent": "#3b6dff",
       "highlight": true
@@ -204,7 +224,7 @@
       "rank": "Gold",
       "title": "International Student Invention Innovation Development Exhibition Competition (i-SIIDEC) 2024",
       "date": "Aug 2024",
-      "description": "Gold Award at i-SIIDEC 2024.",
+      "description": "International Gold Award at i-SIIDEC 2024, open to secondary schools and undergraduates from national and international universities.",
       "image": "",
       "accent": "#e8a400",
       "highlight": true
@@ -214,7 +234,7 @@
       "rank": "Gold",
       "title": "International Industrial Revolution 4.0 Exhibition (iREx) 2024",
       "date": "May 2024",
-      "description": "Gold Award at iREx 2024.",
+      "description": "International Gold Award in Category C (higher institutions) for RazorVation, my diploma final-year project.",
       "image": "",
       "accent": "#e5532d",
       "highlight": true
@@ -224,7 +244,7 @@
       "rank": "3rd",
       "title": "ProCode Workshop: Competitive Programming",
       "date": "Dec 2025",
-      "description": "3rd place in the competitive programming challenge.",
+      "description": "Top 3 in the assessment session with Team Half Genius.",
       "image": "",
       "accent": "#12b886",
       "highlight": false
@@ -258,31 +278,59 @@
       "image": "",
       "accent": "#6b7280",
       "highlight": false
+    },
+    {
+      "id": "deans-list",
+      "rank": "Dean's List",
+      "title": "Dean's Award, Oct 2025 – Feb 2026 session",
+      "date": "Jun 2026",
+      "description": "Received at the Majlis Anugerah Dekan on 6 June 2026.",
+      "image": "",
+      "accent": "#7c5cff",
+      "highlight": false
     }
   ],
   "stories": [
     {
-      "id": "aise-story",
+      "id": "aise-start",
       "kicker": "AISe · Maker-Preneur National 2026",
-      "title": "From a Raspberry Pi to the Deputy Secretary-General",
-      "excerpt": "How a pothole detector grew into a full AI platform and ended up in front of a government minister's office.",
+      "title": "How a random conversation became AISe",
+      "excerpt": "A simple question about catching road damage early grew into computer vision, agentic AI and edge hardware.",
       "body": [
-        "AISe is an AI platform that detects potholes and road cracks from images using a trained YOLOv8 model, with a FastAPI backend and a React.js interface. On top of detection, an LLM writes the inspection summaries, sends alerts by email and Telegram, and a RAG chatbot answers questions about past reports.",
-        "As team lead of Half Genius, I coordinated the team's workstreams while building the application and the system itself. Our team was one of only two UiTM teams selected for Maker-Preneur National 2026.",
-        "The prototype ran on edge hardware: a Raspberry Pi 5 with a Hailo AI accelerator and an AI camera. We pitched it to the judges and presented it to the Deputy Secretary-General (Policy) of the Ministry of Higher Education."
+        "It began with a conversation with my mentor. The question was simple: how do we catch infrastructure problems earlier, instead of waiting on manual inspections and public complaints?",
+        "That question grew into AISe, the Intelligent Infrastructure Management Platform: AI computer vision, agentic AI and RAG, running as edge AI on a Raspberry Pi 5 with a Hailo AI accelerator and an AI camera.",
+        "Most of our past projects were software only, so this time we had to go far beyond code. We learned to deploy and host an application, hook software up to hardware, test computer vision models and design a 3D-printed enclosure at the MakerSpace at Universiti Malaya. We also had to work out the business side: how to market the product, calculate ROI and size the market with TAM, SAM and SOM.",
+        "Experts from KKR, including people involved with the MyJalan app, gave us a much clearer picture of the real problems in infrastructure management and where our system could actually fit in.",
+        "As team lead, this is where I learned the most. I built the application and system while coordinating the team's moving parts. There were plenty of rough moments, but watching everyone pick up something new and bring their own strengths made it all worth it."
       ],
       "cover": "",
       "accent": "#ff6a1f",
       "date": "2026"
     },
     {
+      "id": "aise-pitch",
+      "kicker": "Maker-Preneur National 2026",
+      "title": "Pitching to policymakers: we didn't win, and it was worth it",
+      "excerpt": "9 August on stage at Universiti Malaya, 10 August in front of the Deputy Secretary-General (Policy).",
+      "body": [
+        "Maker-Preneur National brings together teams from public universities across Malaysia, and each university sends only two. Team Half Genius was one of the two teams representing UiTM.",
+        "On 9 August we pitched at Dewan Tunku Canselor, Universiti Malaya. The judges' questions pushed us to think about angles we hadn't considered while heads-down developing. On closing day, 10 August, I presented AISe directly to Encik Ahmad Rizal bin Adnan, Deputy Secretary-General (Policy) at the Ministry of Higher Education. Having someone at that level stop, listen and ask real questions made every late night and every failed hardware test feel worth it.",
+        "We didn't win this time. But in a few weeks we went from a group of CS students to a team that could deploy on real hardware, integrate edge AI, design a 3D-printed enclosure, calculate a business case and pitch it to policymakers. From students to a startup team. That's not a small jump.",
+        "Thank you to Dr Ezzatul Akmal and Dr Muhammad Azizi Mohd Ariffin for the guidance, and to my Half Genius teammates for building it with me from the first whiteboard sketch to the last pitch."
+      ],
+      "cover": "",
+      "accent": "#3b6dff",
+      "date": "Aug 2026"
+    },
+    {
       "id": "three-golds",
       "kicker": "Competitions",
-      "title": "Three Gold Awards, one habit: ship the demo",
-      "excerpt": "iREx 2024, i-SIIDEC 2024 and NISMEC 2026, plus the placements in between.",
+      "title": "Three Gold Awards: two international, one national",
+      "excerpt": "RazorVation at iREx, i-SIIDEC, then NISMEC, plus the placements in between.",
       "body": [
-        "In 2024 I won Gold at the International Industrial Revolution 4.0 Exhibition (iREx) in May, followed by Gold at the International Student Invention Innovation Development Exhibition Competition (i-SIIDEC) in August. In 2026 I added a third Gold at the National Innovation & Sustainability Melati Challenge (NISMEC).",
-        "Alongside those: 2nd place overall at the UiTM Kedah Youth Innovation Competition (Jul 2024), 3rd place at YES! MyNext Move 2025 organised by TalentCorp, Top 20 at ProSolve National 2025, and 3rd place in the ProCode competitive programming workshop (Dec 2025)."
+        "In May 2024 I won Gold at the International Industrial Revolution 4.0 Exhibition (iREx), in Category C for higher institutions, with RazorVation, our diploma final-year project. In August came a second international Gold at the International Student Invention Innovation Development Exhibition Competition (i-SIIDEC).",
+        "In June 2026 I added a national Gold at the National Innovation & Sustainability Melati Challenge (NISMEC), organised by Kolej Kediaman Melati, UiTM.",
+        "Alongside those: 2nd place overall at the UiTM Kedah Youth Innovation Competition (Jul 2024), 3rd place at YES! MyNext Move 2025 organised by TalentCorp, Top 20 at ProSolve National 2025, and a Top 3 finish at the ProCode competitive programming workshop."
       ],
       "cover": "",
       "accent": "#e8a400",
@@ -292,43 +340,61 @@
       "id": "smart-wrist-story",
       "kicker": "IoT · ITT569",
       "title": "The glove that talks back",
-      "excerpt": "A wearable that streams sensor data to a local Gemma 3 model and gets coached back in plain language.",
+      "excerpt": "My first time bridging hardware and a local AI model, and teaching a networking team how to prompt it.",
       "body": [
-        "The AI-Powered Smart Wrist System was an IoT wearable glove built for the ITT569 course, using an Arduino Nano, an ESP32, an MPU6050 motion sensor and a MAX30100 pulse sensor.",
-        "My part was the AI layer and the FastAPI backend, hosting a local Gemma 3 (1B) model that turns real-time sensor data into trend analysis, exercise summaries and recommendations, plus a React.js interface for historical records.",
-        "I also mentored the networking team on AI architecture and prompt engineering, and the lecturer recognised the project as one of the best in the class."
+        "A team of networking students was challenged by their ITT569 (Internet of Things) lecturer to integrate AI into their IoT project. When they asked for my opinion, I suggested using AI to generate summaries and calculations from sensor input: a simple but effective starting point. They invited me to implement the AI logic.",
+        "Together we built an AI-powered Smart Wrist System: a wearable glove that captures movement data and gives intelligent feedback. The hardware used an Arduino Nano, an ESP32, an MPU6050 and a MAX30100, with servo and power connectivity. I built a FastAPI backend hosting a local Gemma 3 (1B) model that turns real-time sensor input into trend analysis, exercise summaries and recommendations, and a React.js interface for historical records.",
+        "Beyond building it, I mentored the networking team through vibe-code sessions: how data flows from physical sensors to a digital model, how the system logic turns inputs into outputs, and how a refined prompt and a clear architecture can change the whole system's effectiveness.",
+        "The lecturer recognised the project as one of the best in the class. It was my first AI-IoT integration of that scale, and it gave me a lot of clarity and motivation for what comes next."
       ],
       "cover": "",
       "accent": "#9b5cff",
-      "date": "2025"
+      "date": "ITT569"
+    },
+    {
+      "id": "fyp-5g",
+      "kicker": "Final Year Project",
+      "title": "Sentinel Infrastructure, and a day at the 5G frontier",
+      "excerpt": "A visit to TRX KL and DNB 5G sparked new ideas for my multi-agent final year project.",
+      "body": [
+        "My final year project, Sentinel Infrastructure: Automated Anomaly Detection and Workflow using Computer Vision and Multi-Agent LLMs, uses multiple AI agents with different tasks and tools to monitor infrastructure, detect anomalies and automate responses.",
+        "I recently visited the 5G infrastructure setup at TRX KL with DNB 5G, where I was introduced to 5G infrastructure, Digital Human Twin, smart surveillance, cloud gaming and edge computing applications, and tried demos from AR glasses and 360 cameras to a smart-city simulation and an RC car driven over 5G.",
+        "Seeing how fast and responsive those systems were gave me new ideas for my own: real-time monitoring, faster processing, and handling infrastructure vulnerabilities more efficiently. Experiences like this help me understand how technology is really used beyond slides and research papers."
+      ],
+      "cover": "",
+      "accent": "#2f6bff",
+      "date": "2026"
     },
     {
       "id": "diploma-to-deans-list",
       "kicker": "Education",
       "title": "From diploma to Dean's List",
-      "excerpt": "Kedah to Shah Alam, a full-stack internship in between, and a CGPA that kept climbing.",
+      "excerpt": "Kedah to Shah Alam, basketball and golds along the way, and a CGPA that kept climbing.",
       "body": [
-        "I started with a Diploma in Computer Science at UiTM Kedah (Oct 2022 – Feb 2025), finishing with a CGPA of 3.53.",
+        "I started with a Diploma in Computer Science at UiTM Kedah (Oct 2022 – Feb 2025) and finished with a CGPA of 3.53. It's where I learned to grow, build confidence and discover what I was capable of, in the classroom and beyond.",
+        "I represented UiTM in basketball at KARiSMA, SAF and SUKOL, learned a lot through Cycom and JSP, and won two Gold Awards at iREx and i-SIIDEC. I graduated at UiTM's 103rd Convocation (Sidang 13).",
         "Between Sep 2024 and Feb 2025 I worked as a Full Stack Intern at Asrix Prime Berhad, testing LLMs, RAG pipelines and AI agents, and building FastAPI services and React.js interfaces.",
-        "In March 2025 I moved on to the BSc (Hons.) in Information Systems Engineering (Big Data Track) at UiTM Shah Alam. My CGPA is now 3.65, and I made the Dean's List for the Oct 2025 – Feb 2026 session."
+        "In March 2025 I moved on to the BSc (Hons.) in Information Systems Engineering (Big Data Track) at UiTM Shah Alam. My CGPA is now 3.65, and I made the Dean's List for the Oct 2025 – Feb 2026 session, which I celebrated at the Majlis Anugerah Dekan on 6 June 2026."
       ],
       "cover": "",
-      "accent": "#2f6bff",
+      "accent": "#7c5cff",
       "date": "2022 – now"
     },
     {
       "id": "beyond-the-code",
       "kicker": "Leadership",
       "title": "Leading beyond the code",
-      "excerpt": "2,000+ attendees, a 58-agency tournament and 300+ graphic assets.",
+      "excerpt": "From small sports events to SUKIPT 2026: 2,000+ attendees, a 58-agency tournament and 300+ graphics.",
       "body": [
+        "It started with small sports events at UiTM such as SAF and SUKOL, then grew into KARiSMA, SUPER UiTM, SUKANUN and MASUM, and finally SUKIPT 2026 at Universiti Malaya, where I served as a Pegawai Delegasi for UiTM. It was my final event with JSP UiTM Shah Alam.",
         "As Head of Promotion for the Karnival Sukan Varsiti Komuniti UiTM Shah Alam, I led promotions with Al-Ikhsan Sport and attracted 2,000+ attendees on opening day.",
-        "On the contingent secretariat for SUKANUN 2025 I managed accreditation, accommodation and athlete logistics across a 58-agency tournament, and our contingent placed 3rd overall.",
-        "As a media team volunteer for UiTM in April 2026, I produced 300+ graphic assets for a 3-day national-level tournament."
+        "On the contingent secretariat for SUKANUN 2025 I managed accommodation keys, accreditation passes and athlete logistics across a 58-agency tournament, and also photographed and edited video over seven days. Our contingent placed 3rd overall.",
+        "As a media team volunteer in April 2026, I produced 300+ graphic assets (100+ winner celebration graphics and 200+ schedule posters) for a 3-day national-level tournament.",
+        "And at the BTBS 2.0 Swim Gala, as someone still new to swimming, I timed my lane across 69 events for close to 200 participants. A first, and a surprisingly fun one."
       ],
       "cover": "",
       "accent": "#ff3d71",
-      "date": "2024 – 2026"
+      "date": "2023 – 2026"
     }
   ],
   "experience": [
@@ -343,6 +409,14 @@
         "Integrated image generation tools (Stable Diffusion, DALL-E) and researched ERP/CRM systems with Docker-based deployment.",
         "Built backend services with FastAPI and user interfaces with React.js in a Linux environment, using GitHub for version control and team collaboration."
       ]
+    },
+    {
+      "id": "opg-taman-botani",
+      "role": "Outdoor Activity Operator",
+      "org": "OPG Taman Botani",
+      "location": "Shah Alam",
+      "period": "Jul 2022 – Sep 2022",
+      "bullets": []
     }
   ],
   "education": [
@@ -361,7 +435,7 @@
       "degree": "Diploma in Computer Science",
       "school": "Universiti Teknologi MARA (UiTM), Kedah",
       "period": "Oct 2022 – Feb 2025",
-      "details": ["Final CGPA: 3.53"]
+      "details": ["Final CGPA: 3.53", "Final-year project: RazorVation, Gold at iREx 2024"]
     }
   ],
   "certifications": [
@@ -386,6 +460,16 @@
       "accent": "#2f6bff"
     },
     {
+      "id": "sas-curiosity-cup",
+      "title": "SAS Curiosity Cup Participant",
+      "issuer": "SAS",
+      "date": "Apr 2026",
+      "description": "",
+      "url": "",
+      "image": "",
+      "accent": "#0ea5a5"
+    },
+    {
       "id": "asean-ai",
       "title": "AI Ready ASEAN Certificate of Completion",
       "issuer": "ASEAN Foundation",
@@ -400,7 +484,7 @@
       "title": "Gemini Certified Educator",
       "issuer": "Google for Education",
       "date": "Dec 2025",
-      "description": "",
+      "description": "Valid until Dec 2028",
       "url": "",
       "image": "",
       "accent": "#9b5cff"
@@ -446,14 +530,21 @@
       "role": "Delegation Officer (Pegawai Delegasi)",
       "org": "UiTM contingent, SUKIPT 2026, Universiti Malaya",
       "period": "2026",
-      "detail": ""
+      "detail": "My final event with JSP UiTM Shah Alam."
+    },
+    {
+      "id": "yss-2026",
+      "role": "Final-stage interview",
+      "org": "Yayasan Sukarelawan Siswa (YSS), Putrajaya",
+      "period": "Jan 2026",
+      "detail": "Represented UiTM Shah Alam at the final-stage interview."
     },
     {
       "id": "media-volunteer-2026",
       "role": "Media Team Volunteer",
       "org": "UiTM",
       "period": "Apr 2026",
-      "detail": "Produced 300+ graphic assets for a 3-day national-level tournament."
+      "detail": "Produced 300+ graphic assets (100+ winner graphics, 200+ schedule posters) and photographed a 3-day national-level tournament."
     },
     {
       "id": "head-promotion-2025",
@@ -467,7 +558,7 @@
       "role": "Contingent Secretariat",
       "org": "SUKANUN 2025, MASUM 2025, KARiSMA 2024",
       "period": "2024 – 2025",
-      "detail": "Managed accreditation, accommodation and athlete logistics across a 58-agency tournament; contingent placed 3rd overall."
+      "detail": "Managed accreditation, accommodation and athlete logistics across a 58-agency tournament (contingent placed 3rd overall), and supported the UiTM contingent's 8th consecutive overall championship at MASUM."
     },
     {
       "id": "exco-jsp",
@@ -481,7 +572,7 @@
       "role": "Volunteer / Official · Timekeeper",
       "org": "SUKOL, SASSA, Lions League UiTM Shah Alam · BTBS 2.0 Swim Gala",
       "period": "2025",
-      "detail": ""
+      "detail": "Head Volunteer for table tennis, volleyball scorekeeper, badminton linesman, and lane timekeeper for 69 swim events and nearly 200 participants."
     },
     {
       "id": "leadership-modules",
@@ -495,14 +586,21 @@
       "role": "Head of Multimedia & Publicity · Head of Multimedia",
       "org": "Computer Science Club (CYCOM), UiTM Kedah · JSP UiTM Kedah",
       "period": "2024",
-      "detail": "Led design and media for STEAMFest, KARiSMA and SAF."
+      "detail": "Designed banners, posters and decks and ran the club's Instagram for Road to Degree, STEAMFest and the AGM; led media for KARiSMA 2024, SAF 2024 and cultural programmes."
+    },
+    {
+      "id": "exco-technical-2023",
+      "role": "Executive Committee Member (Technical) · (Spiritual & Student Welfare)",
+      "org": "JSP UiTM Kedah · Computer Science Club (CYCOM)",
+      "period": "2023 – 2024",
+      "detail": "Ran PA, microphones, mixers and lighting for live campus programmes and the equipment loan process; planned spiritual and welfare programmes."
     },
     {
       "id": "basketball-2023",
       "role": "Athlete (Basketball)",
-      "org": "UiTM Kedah, KARiSMA",
+      "org": "UiTM Kedah",
       "period": "2023",
-      "detail": ""
+      "detail": "Represented UiTM Kedah at KARiSMA, SAF and SUKOL."
     }
   ],
   "gallery": [],
