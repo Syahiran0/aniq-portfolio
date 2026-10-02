@@ -1,0 +1,37 @@
+.footer {
+  padding-block: 36px 48px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.footer__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.footer__meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer__lock {
+  display: inline-grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  color: var(--faint);
+  transition:
+    color 0.2s,
+    background 0.2s;
+}
+
+.footer__lock:hover {
+  color: var(--text);
+  background: var(--surface-2);
+}

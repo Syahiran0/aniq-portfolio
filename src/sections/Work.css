@@ -1,0 +1,178 @@
+/* ---------- the fan ---------- */
+
+.work {
+  overflow-x: clip; /* the outer fan cards are rotated and can poke past the viewport */
+}
+
+.fan {
+  --w: clamp(112px, 19vw, 250px);
+  --step: clamp(33px, 11.4vw, 148px);
+  position: relative;
+  height: calc(var(--w) * 1.25 + 90px);
+  margin-bottom: clamp(40px, 6vw, 80px);
+}
+
+.fan__card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: var(--z);
+  width: var(--w);
+  aspect-ratio: 4 / 5;
+  margin: calc(var(--w) * -0.62) 0 0 calc(var(--w) * -0.5);
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  border-radius: clamp(18px, 2.2vw, 28px);
+  background: var(--surface);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.4);
+  transform: translateX(0) rotate(0deg) scale(0.86);
+  transition:
+    transform 1s var(--ease) var(--d),
+    box-shadow 0.5s;
+}
+
+.fan.is-open .fan__card {
+  transform: translateX(calc(var(--o) * var(--step))) translateY(calc(var(--o2) * 7px)) rotate(calc(var(--o) * 5.5deg));
+}
+
+.fan.is-open .fan__card:hover,
+.fan.is-open .fan__card:focus-visible {
+  z-index: 200;
+  transform: translateX(calc(var(--o) * var(--step))) translateY(-28px) rotate(0deg) scale(1.07);
+  transition-delay: 0s;
+  transition-duration: 0.5s;
+  box-shadow: 0 34px 70px rgba(0, 0, 0, 0.5);
+}
+
+/* cards right of centre are covered on their left side, so their poster label hugs the right edge */
+.fan__card--right .cover__label {
+  text-align: right;
+}
+
+.fan__tag {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  background: rgba(14, 14, 16, 0.72);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 500;
+  text-align: left;
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    opacity 0.3s,
+    transform 0.4s var(--ease);
+}
+
+.fan__card:hover .fan__tag,
+.fan__card:focus-visible .fan__tag {
+  opacity: 1;
+  transform: none;
+}
+
+@media (hover: none) {
+  .fan__tag {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---------- the index list ---------- */
+
+.plist {
+  border-top: 1px solid var(--line);
+}
+
+.plist__row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 56px minmax(0, 2.2fr) minmax(0, 1.6fr) minmax(0, 1fr) 28px;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+  padding: clamp(18px, 2.4vw, 28px) 6px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  transition:
+    padding 0.5s var(--ease),
+    background 0.3s;
+}
+
+.plist__row::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  background: var(--c, var(--accent));
+  transition: width 0.5s var(--ease);
+}
+
+.plist__row:hover {
+  padding-left: 22px;
+  background: var(--bg-2);
+}
+
+.plist__row:hover::before {
+  width: 4px;
+}
+
+.plist__no {
+  color: var(--faint);
+  font-family: var(--font-pixel);
+  font-size: 1.05rem;
+}
+
+.plist__title {
+  display: grid;
+  font-size: clamp(1.2rem, 2.4vw, 1.9rem);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.plist__title small {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.plist__stack,
+.plist__role {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.plist__arrow {
+  color: var(--faint);
+  transition:
+    transform 0.4s var(--ease),
+    color 0.3s;
+}
+
+.plist__row:hover .plist__arrow {
+  color: var(--accent);
+  transform: translate(3px, -3px);
+}
+
+@media (max-width: 860px) {
+  .plist__row {
+    grid-template-columns: 38px minmax(0, 1fr) 24px;
+  }
+  .plist__stack,
+  .plist__role {
+    display: none;
+  }
+}

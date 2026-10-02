@@ -1,0 +1,11 @@
+node_modules
+dist
+dist-ssr
+*.local
+.env
+.env.*
+.vercel
+.DS_Store
+Thumbs.db
+npm-debug.log*
+.claude/settings.local.json

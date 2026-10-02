@@ -1,0 +1,77 @@
+.connect-modal {
+  display: grid;
+  gap: 14px;
+  padding: 8px clamp(20px, 4vw, 32px) clamp(22px, 4vw, 32px);
+  clear: both;
+}
+
+.connect-modal__title {
+  font-size: 1.9rem;
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.connect-modal__avail {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.connect-modal__list {
+  display: grid;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.connect-modal__list a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--surface-2);
+  transition:
+    border-color 0.25s,
+    transform 0.35s var(--ease),
+    background 0.25s;
+}
+
+.connect-modal__list a:hover {
+  border-color: var(--accent);
+  transform: translateX(4px);
+}
+
+.connect-modal__icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+.connect-modal__text {
+  display: grid;
+  flex: 1;
+  min-width: 0;
+  line-height: 1.3;
+}
+
+.connect-modal__text strong {
+  font-weight: 500;
+}
+
+.connect-modal__text small {
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.connect-modal__copy {
+  justify-self: start;
+}

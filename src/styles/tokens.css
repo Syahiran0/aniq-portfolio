@@ -1,0 +1,59 @@
+/* Design tokens. Change a value here and it updates the whole site. */
+
+:root {
+  --font-sans: 'Geist Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'Geist Mono Variable', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  --font-pixel: 'Pixelify Sans Variable', ui-monospace, monospace;
+  --font-hand: 'Caveat Variable', 'Comic Sans MS', cursive;
+
+  --accent: #ff6a1f;
+  --accent-ink: #1b0a00;
+
+  --radius-xl: 36px;
+  --radius-lg: 28px;
+  --radius-md: 18px;
+  --radius-sm: 12px;
+
+  --nav-h: 64px;
+  --maxw: 1240px;
+  --gutter: clamp(18px, 4vw, 40px);
+
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+:root,
+:root[data-theme='dark'] {
+  --bg: #0a0a0b;
+  --bg-2: #101012;
+  --surface: #151517;
+  --surface-2: #1e1e21;
+  --text: #ececf1;
+  --muted: #9b9ba6;
+  --faint: #5f5f69;
+  --line: rgba(255, 255, 255, 0.09);
+  --line-strong: rgba(255, 255, 255, 0.18);
+  --glass: rgba(26, 26, 29, 0.72);
+  --inverse: #f3f3f6;
+  --inverse-ink: #0b0b0c;
+  --shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+  --grain-opacity: 0.07;
+  color-scheme: dark;
+}
+
+:root[data-theme='light'] {
+  --bg: #efeff1;
+  --bg-2: #e6e6ea;
+  --surface: #ffffff;
+  --surface-2: #f6f6f8;
+  --text: #0b0b0c;
+  --muted: #5a5a66;
+  --faint: #9a9aa5;
+  --line: rgba(0, 0, 0, 0.1);
+  --line-strong: rgba(0, 0, 0, 0.22);
+  --glass: rgba(255, 255, 255, 0.82);
+  --inverse: #0b0b0c;
+  --inverse-ink: #f3f3f6;
+  --shadow: 0 30px 70px rgba(20, 20, 40, 0.16);
+  --grain-opacity: 0.05;
+  color-scheme: light;
+}

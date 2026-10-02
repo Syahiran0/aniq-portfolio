@@ -1,0 +1,159 @@
+.about__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: clamp(36px, 7vw, 110px);
+}
+
+/* ---- photo with the zig-zag cut + sticker ---- */
+
+.about__photo {
+  position: relative;
+  max-width: 460px;
+}
+
+.about__frame {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-xl);
+  background: var(--accent);
+  box-shadow: var(--shadow);
+}
+
+.about__frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about__placeholder {
+  display: grid;
+  place-items: end center;
+  height: 100%;
+  color: var(--accent-ink);
+  background:
+    radial-gradient(rgba(0, 0, 0, 0.16) 1.5px, transparent 2px) 0 0 / 16px 16px,
+    linear-gradient(160deg, color-mix(in srgb, var(--accent) 100%, #fff 20%), var(--accent));
+}
+
+.about__placeholder svg {
+  width: 78%;
+  opacity: 0.85;
+}
+
+.about__zig {
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 28px;
+  background: var(--bg);
+  -webkit-mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% / 36px 100%;
+  mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% / 36px 100%;
+}
+
+.about__sticker {
+  position: absolute;
+  top: -22px;
+  right: -26px;
+  display: grid;
+  justify-items: center;
+  transform: rotate(7deg);
+  color: var(--text);
+  pointer-events: none;
+}
+
+.about__sticker-text {
+  position: relative;
+  padding: 6px 14px;
+  border-radius: 14px;
+  background: var(--inverse);
+  color: var(--inverse-ink);
+  font-family: var(--font-hand);
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  font-weight: 700;
+  line-height: 1.1;
+  white-space: nowrap;
+  box-shadow: 4px 5px 0 var(--accent);
+}
+
+.about__arrow {
+  width: 64px;
+  margin: 4px 0 0 -34px;
+  color: var(--accent);
+  transform: rotate(18deg) scaleX(-1);
+}
+
+.about__burst {
+  position: absolute;
+  top: -8px;
+  left: -14px;
+  width: 26px;
+  height: 26px;
+  background:
+    linear-gradient(var(--accent), var(--accent)) 50% 0 / 3px 9px no-repeat,
+    linear-gradient(var(--accent), var(--accent)) 0 50% / 9px 3px no-repeat;
+  transform: rotate(-30deg);
+}
+
+/* ---- text ---- */
+
+.about__head {
+  margin-bottom: 26px;
+}
+
+.about__text {
+  display: grid;
+  gap: 16px;
+  max-width: 62ch;
+  color: color-mix(in srgb, var(--text) 82%, var(--muted));
+  font-size: clamp(1rem, 1.35vw, 1.12rem);
+}
+
+.about__facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 0;
+  margin: 34px 0;
+  border-top: 1px solid var(--line);
+}
+
+.about__facts div {
+  padding: 16px 16px 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.about__facts dt {
+  color: var(--faint);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.about__facts dd {
+  margin: 4px 0 0;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.about__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+@media (max-width: 880px) {
+  .about__grid {
+    grid-template-columns: 1fr;
+  }
+  .about__photo {
+    width: min(100%, 380px);
+    margin-inline: auto;
+  }
+  .about__sticker {
+    right: -8px;
+  }
+}

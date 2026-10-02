@@ -1,0 +1,41 @@
+.cover {
+  width: 100%;
+  height: 100%;
+}
+
+.cover--img {
+  object-fit: cover;
+}
+
+.cover--art {
+  position: relative;
+  container-type: inline-size;
+  overflow: hidden;
+  background:
+    radial-gradient(120% 90% at 15% 0%, color-mix(in srgb, var(--c) 100%, #fff 18%), transparent 62%),
+    radial-gradient(90% 80% at 100% 100%, color-mix(in srgb, var(--c) 78%, #000), transparent 66%),
+    linear-gradient(150deg, color-mix(in srgb, var(--c) 70%, #000), color-mix(in srgb, var(--c) 30%, #000));
+}
+
+/* dot-matrix texture: a nod to the "every dot" reference */
+.cover--art::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(rgba(255, 255, 255, 0.28) 1px, transparent 1.6px) 0 0 / 14px 14px;
+  mask-image: linear-gradient(160deg, #000 0%, transparent 70%);
+}
+
+.cover__label {
+  position: absolute;
+  left: 7cqi;
+  bottom: 6cqi;
+  right: 7cqi;
+  font-size: clamp(1.1rem, 13cqi, 4rem);
+  overflow-wrap: anywhere;
+  font-weight: 600;
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+  color: rgba(255, 255, 255, 0.94);
+  text-wrap: balance;
+}
