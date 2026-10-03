@@ -35,7 +35,7 @@ export function useTheme() {
       const next = current === 'light' ? 'dark' : 'light'
       document.documentElement.dataset.theme = next
       try {
-        localStorage.setItem('aniq-portfolio:theme', next)
+        localStorage.setItem('aniq-portfolio:theme:v2', next)
       } catch {
         /* ignore */
       }

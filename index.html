@@ -14,8 +14,9 @@
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <script>
       // Apply the saved theme before first paint so there is no light/dark flash.
+      // (":v2" so a "dark" saved back when dark was the default doesn't override the light default.)
       try {
-        var t = localStorage.getItem('aniq-portfolio:theme')
+        var t = localStorage.getItem('aniq-portfolio:theme:v2')
         if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t
       } catch (e) {}
     </script>

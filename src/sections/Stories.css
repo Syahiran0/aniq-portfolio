@@ -33,8 +33,6 @@
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-padding-inline: var(--pad);
-  scrollbar-width: thin;
-  scrollbar-color: var(--line-strong) transparent;
 }
 
 .story-wrap {

@@ -9,6 +9,15 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+/* scrollbars are hidden everywhere; scrolling (wheel, touch, keys) still works */
+* {
+  scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   margin: 0;
   background: var(--bg);
