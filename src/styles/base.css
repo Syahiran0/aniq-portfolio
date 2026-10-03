@@ -18,7 +18,9 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  overflow-x: hidden;
+  overflow-x: hidden; /* fallback */
+  overflow-x: clip; /* doesn't create a scroll container, so position: sticky keeps working on iOS */
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* film grain over everything: cheap, static, gives the dark theme some texture */

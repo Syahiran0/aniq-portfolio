@@ -18,7 +18,7 @@ export default function DetailModal({ item: current, onClose }) {
       {item && (
         <article style={{ '--c': item.accent }}>
           <div className="detail__cover">
-            <Cover image={item.cover} accent={item.accent} label={shortLabel(item.title)} alt={item.title} />
+            <Cover image={item.cover} accent={item.accent} label={item.label || shortLabel(item.title)} alt={item.title} />
           </div>
           <div className="detail__body">
             <div>

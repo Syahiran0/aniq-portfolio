@@ -1,0 +1,49 @@
+/*
+ * Touch screens have no real hover: after a tap the browser leaves :hover "stuck" on the
+ * element, so cards stayed lifted / shifted and looked broken. This file undoes the hover
+ * movements on touch devices. It is imported last in main.jsx so it wins the cascade.
+ */
+@media (hover: none) {
+  .btn:hover,
+  .story:hover,
+  .cert:hover,
+  .hero__chip:hover,
+  .nav__logo:hover,
+  .connect__mail:hover,
+  .skill-card .chip:hover,
+  .connect-modal__list a:hover,
+  .story:hover .story__cover .cover,
+  .story:hover .story__more svg,
+  .cert:hover .cert__link,
+  .hero__connect:hover svg,
+  .connect__mail:hover svg:last-child,
+  .plist__row:hover .plist__arrow,
+  .gallery__item button:hover img {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  .story:hover,
+  .cert:hover {
+    border-color: var(--line) !important;
+  }
+
+  .plist__row:hover {
+    padding-left: 6px !important;
+    background: transparent !important;
+  }
+
+  .plist__row:hover::before {
+    width: 0 !important;
+  }
+
+  .lead:hover {
+    background: transparent !important;
+  }
+
+  /* captions that normally appear on hover are always visible on touch */
+  .gallery__item span {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

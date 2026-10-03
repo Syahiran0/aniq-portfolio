@@ -6,7 +6,9 @@
 
 .fan {
   --w: clamp(112px, 19vw, 250px);
-  --step: clamp(33px, 11.4vw, 148px);
+  /* spread so the outermost (rotated) cards stay inside the screen, whatever the card count (--n) */
+  --step: clamp(20px, calc((50vw - var(--gutter) - var(--w) * 0.7) / ((var(--n, 8) - 1) / 2)), 148px);
+  --tilt: 19deg; /* rotation of the outermost cards */
   position: relative;
   height: calc(var(--w) * 1.25 + 90px);
   margin-bottom: clamp(40px, 6vw, 80px);
@@ -24,7 +26,7 @@
   border: 1px solid var(--line-strong);
   border-radius: clamp(18px, 2.2vw, 28px);
   background: var(--surface);
-  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.4);
+  box-shadow: var(--shadow-card);
   transform: translateX(0) rotate(0deg) scale(0.86);
   transition:
     transform 1s var(--ease) var(--d),
@@ -32,7 +34,7 @@
 }
 
 .fan.is-open .fan__card {
-  transform: translateX(calc(var(--o) * var(--step))) translateY(calc(var(--o2) * 7px)) rotate(calc(var(--o) * 5.5deg));
+  transform: translateX(calc(var(--o) * var(--step))) translateY(calc(var(--o2) * 7px)) rotate(calc(var(--o) * var(--tilt) / ((var(--n, 8) - 1) / 2)));
 }
 
 .fan.is-open .fan__card:hover,
@@ -41,7 +43,7 @@
   transform: translateX(calc(var(--o) * var(--step))) translateY(-28px) rotate(0deg) scale(1.07);
   transition-delay: 0s;
   transition-duration: 0.5s;
-  box-shadow: 0 34px 70px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--shadow-card), 0 14px 30px color-mix(in srgb, var(--accent) 18%, transparent);
 }
 
 /* cards right of centre are covered on their left side, so their poster label hugs the right edge */
@@ -83,6 +85,54 @@
   .fan__tag {
     opacity: 1;
     transform: none;
+  }
+}
+
+/* On phones an 8-card fan can't fit without clipping, so it becomes a swipeable row. */
+@media (max-width: 640px) {
+  .fan {
+    display: flex;
+    gap: 14px;
+    height: auto;
+    margin-bottom: 36px;
+    padding: 10px var(--gutter) 26px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: var(--gutter);
+    scrollbar-width: none;
+  }
+
+  .fan::-webkit-scrollbar {
+    display: none;
+  }
+
+  .fan .fan__card,
+  .fan.is-open .fan__card,
+  .fan.is-open .fan__card:hover,
+  .fan.is-open .fan__card:focus-visible {
+    position: relative;
+    top: auto;
+    left: auto;
+    z-index: auto;
+    flex: none;
+    width: min(66vw, 280px);
+    margin: 0;
+    transform: none;
+    scroll-snap-align: start;
+    box-shadow: var(--shadow-card);
+  }
+
+  .fan__tag {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* nothing overlaps in the row, so the poster word sits at the top instead of under the title tag */
+  .fan .cover__label,
+  .fan__card--right .cover__label {
+    top: 8cqi;
+    bottom: auto;
+    text-align: left;
   }
 }
 

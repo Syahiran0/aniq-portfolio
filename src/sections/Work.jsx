@@ -10,6 +10,7 @@ import './Work.css'
 
 const toDetail = (p) => ({
   title: p.title,
+  label: p.label,
   subtitle: p.subtitle,
   kicker: p.role,
   meta: [p.period],
@@ -27,7 +28,7 @@ function Fan({ projects, onOpen }) {
   const n = projects.length
 
   return (
-    <div ref={ref} className={`fan ${inView ? 'is-open' : ''}`}>
+    <div ref={ref} className={`fan ${inView ? 'is-open' : ''}`} style={{ '--n': n }}>
       {projects.map((p, i) => {
         const o = i - (n - 1) / 2
         return (
@@ -38,7 +39,7 @@ function Fan({ projects, onOpen }) {
             onClick={() => onOpen(p)}
             aria-label={`Open ${p.title}`}
           >
-            <Cover image={p.cover} accent={p.accent} label={shortLabel(p.title)} alt={p.title} />
+            <Cover image={p.cover} accent={p.accent} label={p.label || shortLabel(p.title)} alt={p.title} />
             <span className="fan__tag">
               {p.title}
               <ArrowUpRight size={13} />

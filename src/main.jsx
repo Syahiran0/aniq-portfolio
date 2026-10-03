@@ -10,6 +10,7 @@ import './styles/tokens.css'
 import './styles/base.css'
 
 import App from './App.jsx'
+import './styles/touch.css' // after App so its touch overrides win the cascade
 
 // HashRouter keeps routing client-side only (/#/ and /#/admin),
 // so the site works on GitHub Pages and Vercel with no server config.

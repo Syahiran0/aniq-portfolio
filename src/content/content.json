@@ -293,6 +293,7 @@
   "stories": [
     {
       "id": "aise-start",
+      "label": "AISe",
       "kicker": "AISe · Maker-Preneur National 2026",
       "title": "How a random conversation became AISe",
       "excerpt": "A simple question about catching road damage early grew into computer vision, agentic AI and edge hardware.",
@@ -309,6 +310,7 @@
     },
     {
       "id": "aise-pitch",
+      "label": "Pitch",
       "kicker": "Maker-Preneur National 2026",
       "title": "Pitching to policymakers: we didn't win, and it was worth it",
       "excerpt": "9 August on stage at Universiti Malaya, 10 August in front of the Deputy Secretary-General (Policy).",
@@ -324,6 +326,7 @@
     },
     {
       "id": "three-golds",
+      "label": "3× Gold",
       "kicker": "Competitions",
       "title": "Three Gold Awards: two international, one national",
       "excerpt": "RazorVation at iREx, i-SIIDEC, then NISMEC, plus the placements in between.",
@@ -338,6 +341,7 @@
     },
     {
       "id": "smart-wrist-story",
+      "label": "IoT",
       "kicker": "IoT · ITT569",
       "title": "The glove that talks back",
       "excerpt": "My first time bridging hardware and a local AI model, and teaching a networking team how to prompt it.",
@@ -353,6 +357,7 @@
     },
     {
       "id": "fyp-5g",
+      "label": "5G",
       "kicker": "Final Year Project",
       "title": "Sentinel Infrastructure, and a day at the 5G frontier",
       "excerpt": "A visit to TRX KL and DNB 5G sparked new ideas for my multi-agent final year project.",
@@ -367,6 +372,7 @@
     },
     {
       "id": "diploma-to-deans-list",
+      "label": "Dean's",
       "kicker": "Education",
       "title": "From diploma to Dean's List",
       "excerpt": "Kedah to Shah Alam, basketball and golds along the way, and a CGPA that kept climbing.",
@@ -382,6 +388,7 @@
     },
     {
       "id": "beyond-the-code",
+      "label": "Lead",
       "kicker": "Leadership",
       "title": "Leading beyond the code",
       "excerpt": "From small sports events to SUKIPT 2026: 2,000+ attendees, a 58-agency tournament and 300+ graphics.",

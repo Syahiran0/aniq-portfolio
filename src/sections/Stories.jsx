@@ -8,6 +8,7 @@ import './Stories.css'
 
 const toDetail = (s) => ({
   title: s.title,
+  label: s.label,
   kicker: s.kicker,
   meta: [s.date],
   cover: s.cover,
@@ -53,7 +54,7 @@ export default function Stories() {
           <Reveal key={s.id} delay={Math.min(i, 3) * 0.08} className="story-wrap">
             <button className="story" style={{ '--c': s.accent }} onClick={() => setActive(s)}>
               <span className="story__cover">
-                <Cover image={s.cover} accent={s.accent} label={shortLabel(s.kicker?.split('·')[0] || s.title)} alt="" />
+                <Cover image={s.cover} accent={s.accent} label={s.label || shortLabel(s.kicker?.split('·')[0] || s.title)} alt="" />
                 <span className="story__date">{s.date}</span>
               </span>
               <span className="story__body">

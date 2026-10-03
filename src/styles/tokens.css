@@ -21,25 +21,8 @@
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+/* Light is the default theme; dark is opt-in via the toggle (html[data-theme='dark']). */
 :root,
-:root[data-theme='dark'] {
-  --bg: #0a0a0b;
-  --bg-2: #101012;
-  --surface: #151517;
-  --surface-2: #1e1e21;
-  --text: #ececf1;
-  --muted: #9b9ba6;
-  --faint: #5f5f69;
-  --line: rgba(255, 255, 255, 0.09);
-  --line-strong: rgba(255, 255, 255, 0.18);
-  --glass: rgba(26, 26, 29, 0.72);
-  --inverse: #f3f3f6;
-  --inverse-ink: #0b0b0c;
-  --shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
-  --grain-opacity: 0.07;
-  color-scheme: dark;
-}
-
 :root[data-theme='light'] {
   --bg: #efeff1;
   --bg-2: #e6e6ea;
@@ -54,6 +37,26 @@
   --inverse: #0b0b0c;
   --inverse-ink: #f3f3f6;
   --shadow: 0 30px 70px rgba(20, 20, 40, 0.16);
+  --shadow-card: 0 18px 40px rgba(20, 20, 40, 0.2);
   --grain-opacity: 0.05;
   color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  --bg: #0a0a0b;
+  --bg-2: #101012;
+  --surface: #151517;
+  --surface-2: #1e1e21;
+  --text: #ececf1;
+  --muted: #9b9ba6;
+  --faint: #5f5f69;
+  --line: rgba(255, 255, 255, 0.09);
+  --line-strong: rgba(255, 255, 255, 0.18);
+  --glass: rgba(26, 26, 29, 0.72);
+  --inverse: #f3f3f6;
+  --inverse-ink: #0b0b0c;
+  --shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+  --shadow-card: 0 24px 50px rgba(0, 0, 0, 0.45);
+  --grain-opacity: 0.07;
+  color-scheme: dark;
 }

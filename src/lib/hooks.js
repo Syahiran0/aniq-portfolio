@@ -28,11 +28,11 @@ export function useInView({ threshold = 0.25, once = true } = {}) {
 
 /** Light / dark theme, persisted. The initial value is applied in index.html to avoid a flash. */
 export function useTheme() {
-  const [theme, setTheme] = useState(() => document.documentElement.dataset.theme || 'dark')
+  const [theme, setTheme] = useState(() => document.documentElement.dataset.theme || 'light')
 
   const toggle = useCallback(() => {
     setTheme((current) => {
-      const next = current === 'dark' ? 'light' : 'dark'
+      const next = current === 'light' ? 'dark' : 'light'
       document.documentElement.dataset.theme = next
       try {
         localStorage.setItem('aniq-portfolio:theme', next)

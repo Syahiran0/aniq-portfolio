@@ -8,6 +8,8 @@ export function shortLabel(title = '') {
   const two = words.slice(0, 2).join(' ')
   if (words.length > 1 && two.length <= 12) return two
   if (words[0].length <= 12) return words[0]
+  const head = words[0].split('-')[0]
+  if (head.length >= 3 && head.length <= 12) return head
   return words.map((w) => w[0]).join('').slice(0, 4).toUpperCase()
 }
 

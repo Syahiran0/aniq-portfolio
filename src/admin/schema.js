@@ -98,6 +98,7 @@ export const SECTIONS = [
     defaults: { accent: '#ff6a1f' },
     fields: [
       text('title', 'Title'),
+      text('label', 'Poster word', { help: 'Big word on the auto-generated cover. Leave empty to use the title.' }),
       text('subtitle', 'Subtitle'),
       text('role', 'Your role'),
       text('period', 'Event / period'),
@@ -144,6 +145,7 @@ export const SECTIONS = [
     fields: [
       text('kicker', 'Small label above the title'),
       text('title', 'Title'),
+      text('label', 'Poster word', { help: 'Big word on the auto-generated cover. Leave empty to pick one automatically.' }),
       text('date', 'Date / period'),
       textarea('excerpt', 'Teaser (shown on the card)', { rows: 2 }),
       strings('body', 'Story paragraphs', { multiline: true, help: 'One paragraph per box.' }),
