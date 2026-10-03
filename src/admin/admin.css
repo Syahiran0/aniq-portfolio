@@ -412,6 +412,14 @@
   object-fit: cover;
 }
 
+.adm-media__preview.is-filled {
+  color: var(--accent);
+}
+
+.adm-media__status {
+  overflow-wrap: anywhere;
+}
+
 .adm-media__body {
   display: grid;
   align-content: center;

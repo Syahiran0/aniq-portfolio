@@ -26,8 +26,11 @@
     "linkedin": "https://www.linkedin.com/in/ihtisyamsyahiran",
     "github": "https://github.com/Syahiran0",
     "photo": "",
-    "resumeUrl": "",
     "availability": "Open to software & AI engineering roles"
+  },
+  "resume": {
+    "file": "",
+    "label": "Download CV"
   },
   "hero": {
     "label": "AI engineering with product taste",

@@ -51,8 +51,19 @@ export const SECTIONS = [
       url('linkedin', 'LinkedIn URL'),
       url('github', 'GitHub URL'),
       image('photo', 'Profile photo', { help: 'Shown in the nav, the hero avatar and the About section. A portrait works best.' }),
-      file('resumeUrl', 'Resume (PDF)', { help: 'Adds a Resume download button to the About and Contact sections.' }),
       text('availability', 'Availability line'),
+    ],
+  },
+  {
+    id: 'resume',
+    label: 'Resume / CV',
+    icon: 'FileText',
+    kind: 'object',
+    description:
+      'Attach your CV here. Once a file is attached, a download button appears in the home hero, About, Contact and the Connect pop-up. Remove the file and the buttons disappear again.',
+    fields: [
+      file('file', 'CV / resume file', { help: 'PDF recommended (Word files work too), up to 2.5 MB. Replace it any time: every upload gets a fresh link, so visitors never get a stale copy.' }),
+      text('label', 'Button label', { placeholder: 'Download CV' }),
     ],
   },
   {

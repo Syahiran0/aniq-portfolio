@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
-import { ChevronDown, ChevronUp, Copy, FileText, ImagePlus, Plus, Trash2, X } from 'lucide-react'
+import { ChevronDown, ChevronUp, Copy, ImagePlus, Plus, Trash2, X } from 'lucide-react'
 import { asset } from '../lib/assets'
-import { approxKB, compressImage, readAsDataURL } from '../lib/image'
+import { approxKB, compressImage } from '../lib/image'
+import DocumentField from './DocumentField'
 import { blankItem } from './schema'
 
 /* ------------------------------------------------------------------ */
@@ -47,7 +48,7 @@ export function FieldRenderer({ field, value, onChange }) {
     case 'image':
       return <MediaField field={field} value={value || ''} onChange={onChange} />
     case 'file':
-      return <MediaField field={field} value={value || ''} onChange={onChange} isFile />
+      return <DocumentField field={field} value={value || ''} onChange={onChange} />
     case 'group':
       return (
         <fieldset className={`adm-group ${field.inline ? 'adm-group--inline' : ''}`}>
@@ -155,11 +156,9 @@ function StringsField({ field, value, onChange }) {
   )
 }
 
-/* ------------------------------ image / file upload ------------------------------ */
+/* ------------------------------ image upload (documents: see DocumentField) ------------------------------ */
 
-const MAX_FILE_KB = 2500
-
-function MediaField({ field, value, onChange, isFile = false }) {
+function MediaField({ field, value, onChange }) {
   const input = useRef(null)
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState('')
@@ -170,13 +169,8 @@ function MediaField({ field, value, onChange, isFile = false }) {
     setError('')
     setBusy(true)
     try {
-      if (isFile) {
-        if (file.size / 1024 > MAX_FILE_KB) throw new Error(`File is too large (max ${MAX_FILE_KB / 1000} MB).`)
-        onChange(await readAsDataURL(file))
-      } else {
-        if (!file.type.startsWith('image/')) throw new Error('Please choose an image file.')
-        onChange(await compressImage(file))
-      }
+      if (!file.type.startsWith('image/')) throw new Error('Please choose an image file.')
+      onChange(await compressImage(file))
     } catch (err) {
       setError(err.message || 'Could not read that file.')
     } finally {
@@ -196,13 +190,13 @@ function MediaField({ field, value, onChange, isFile = false }) {
         }}
       >
         <div className="adm-media__preview">
-          {value && !isFile ? <img src={asset(value)} alt="" /> : value && isFile ? <FileText size={28} /> : <ImagePlus size={26} />}
+          {value ? <img src={asset(value)} alt="" /> : <ImagePlus size={26} />}
         </div>
 
         <div className="adm-media__body">
           <div className="adm-media__buttons">
             <button type="button" className="adm-btn adm-btn--sm" onClick={() => input.current?.click()} disabled={busy}>
-              {busy ? 'Processing…' : value ? 'Replace' : isFile ? 'Upload file' : 'Upload image'}
+              {busy ? 'Processing…' : value ? 'Replace' : 'Upload image'}
             </button>
             {value && (
               <button type="button" className="adm-btn adm-btn--ghost adm-btn--sm" onClick={() => onChange('')}>
@@ -212,7 +206,7 @@ function MediaField({ field, value, onChange, isFile = false }) {
           </div>
           <input
             className="adm-input adm-input--sm"
-            placeholder={isFile ? '…or paste a file URL' : '…or paste an image URL'}
+            placeholder="…or paste an image URL"
             value={isUpload ? '' : value}
             onChange={(e) => onChange(e.target.value)}
           />
@@ -226,7 +220,7 @@ function MediaField({ field, value, onChange, isFile = false }) {
           ref={input}
           hidden
           type="file"
-          accept={isFile ? 'application/pdf' : 'image/*'}
+          accept="image/*"
           onChange={(e) => {
             pick(e.target.files?.[0])
             e.target.value = ''

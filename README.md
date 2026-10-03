@@ -13,6 +13,7 @@ npm run build      # production build in dist/
 | You want to…                          | Go to                                                         |
 | ------------------------------------- | ------------------------------------------------------------- |
 | Change any text / list on the site    | **Dashboard** → `http://localhost:5173/#/admin` (or the 🔒 icon in the footer) |
+| Attach / replace / remove your CV     | **Dashboard → Resume / CV** (or drop a PDF in `public/uploads/` and type `uploads/<name>.pdf` there) |
 | See the raw content                   | `src/content/content.json` (the single source of truth)       |
 | Change colours, radius, fonts         | `src/styles/tokens.css`                                       |
 | Reorder / hide / add a site section   | `src/pages/Home.jsx` (and the "Site settings" page in the dashboard) |

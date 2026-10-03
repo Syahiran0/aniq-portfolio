@@ -8,6 +8,7 @@ import {
   Briefcase,
   Download,
   ExternalLink,
+  FileText,
   GraduationCap,
   Image,
   Layers,
@@ -29,7 +30,7 @@ import PublishPanel from './PublishPanel'
 import { SECTIONS } from './schema'
 import './admin.css'
 
-const ICONS = { User, Sparkles, BarChart3, Layers, Trophy, BookOpen, Smile, Briefcase, GraduationCap, BadgeCheck, Wrench, Users, Image, Mail, Settings2, Rocket }
+const ICONS = { User, FileText, Sparkles, BarChart3, Layers, Trophy, BookOpen, Smile, Briefcase, GraduationCap, BadgeCheck, Wrench, Users, Image, Mail, Settings2, Rocket }
 
 const PUBLISH = { id: 'publish', label: 'Publish', icon: 'Rocket' }
 

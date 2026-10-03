@@ -1,8 +1,9 @@
-import { ArrowUpRight, Download, Mail, MessageCircle } from 'lucide-react'
+import { ArrowUpRight, Mail, MessageCircle } from 'lucide-react'
 import Reveal from '../components/Reveal'
 import { GitHubIcon, LinkedInIcon } from '../components/Icons'
+import ResumeLink from '../components/ResumeLink'
 import { useContent } from '../content/store'
-import { asset, mailto, whatsappLink } from '../lib/assets'
+import { mailto, whatsappLink } from '../lib/assets'
 import './Connect.css'
 
 export default function Connect() {
@@ -12,7 +13,6 @@ export default function Connect() {
     { label: 'LinkedIn', href: profile.linkedin, icon: <LinkedInIcon /> },
     { label: 'GitHub', href: profile.github, icon: <GitHubIcon /> },
     { label: 'WhatsApp', href: whatsappLink(profile.phone), icon: <MessageCircle size={20} /> },
-    { label: 'Resume', href: asset(profile.resumeUrl), icon: <Download size={20} />, download: true },
   ].filter((s) => s.href)
 
   return (
@@ -39,11 +39,12 @@ export default function Connect() {
 
         <Reveal className="connect__socials" delay={0.26}>
           {socials.map((s) => (
-            <a key={s.label} className="btn btn--ghost" href={s.href} target={s.download ? undefined : '_blank'} rel="noreferrer" download={s.download || undefined}>
+            <a key={s.label} className="btn btn--ghost" href={s.href} target="_blank" rel="noreferrer">
               {s.icon}
               {s.label}
             </a>
           ))}
+          <ResumeLink iconSize={20} />
         </Reveal>
       </div>
     </section>

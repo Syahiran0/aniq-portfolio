@@ -167,6 +167,20 @@
   text-wrap: balance;
 }
 
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.hero__cv {
+  height: 54px;
+  padding: 0 26px;
+  font-size: 1rem;
+}
+
 .hero__connect {
   height: 54px;
   padding: 0 14px 0 30px;

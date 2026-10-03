@@ -3,12 +3,14 @@ import { ArrowUpRight, Check, Copy, Download, Mail, MessageCircle } from 'lucide
 import Modal from '../components/Modal'
 import { GitHubIcon, LinkedInIcon } from '../components/Icons'
 import { useContent } from '../content/store'
-import { asset, mailto, whatsappLink } from '../lib/assets'
+import { mailto, whatsappLink } from '../lib/assets'
+import { useResume } from '../lib/resume'
 import './ConnectModal.css'
 
 /** Everything a recruiter might want, one click away. Channels with no value are hidden. */
 export default function ConnectModal({ open, onClose }) {
   const { profile, connect } = useContent()
+  const resume = useResume()
   const [copied, setCopied] = useState(false)
 
   const copyEmail = async () => {
@@ -26,7 +28,7 @@ export default function ConnectModal({ open, onClose }) {
     { key: 'linkedin', icon: <LinkedInIcon />, label: 'LinkedIn', value: 'Let’s connect', href: profile.linkedin },
     { key: 'github', icon: <GitHubIcon />, label: 'GitHub', value: 'See the code', href: profile.github },
     { key: 'whatsapp', icon: <MessageCircle size={20} />, label: 'WhatsApp', value: 'Send a message', href: whatsappLink(profile.phone) },
-    { key: 'resume', icon: <Download size={20} />, label: 'Resume', value: 'Download', href: asset(profile.resumeUrl), download: true },
+    ...(resume ? [{ key: 'resume', icon: <Download size={20} />, label: 'CV / Resume', value: 'Download', href: resume.href, download: resume.external ? undefined : resume.filename }] : []),
   ].filter((c) => c.href && c.value)
 
   return (
@@ -39,7 +41,7 @@ export default function ConnectModal({ open, onClose }) {
         <ul className="connect-modal__list">
           {channels.map((c) => (
             <li key={c.key}>
-              <a href={c.href} target={c.download ? undefined : '_blank'} rel="noreferrer" download={c.download || undefined}>
+              <a href={c.href} target={c.download ? undefined : '_blank'} rel="noreferrer" download={c.download}>
                 <span className="connect-modal__icon">{c.icon}</span>
                 <span className="connect-modal__text">
                   <strong>{c.label}</strong>

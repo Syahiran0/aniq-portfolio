@@ -1,6 +1,7 @@
-import { ArrowRight, Download } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import Reveal from '../components/Reveal'
 import { Silhouette } from '../components/Icons'
+import ResumeLink from '../components/ResumeLink'
 import { useContent } from '../content/store'
 import { asset } from '../lib/assets'
 import './About.css'
@@ -63,11 +64,7 @@ export default function About({ onConnect }) {
             <button className="btn btn--light" onClick={onConnect}>
               Let's talk <ArrowRight size={18} />
             </button>
-            {profile.resumeUrl && (
-              <a className="btn btn--ghost" href={asset(profile.resumeUrl)} download>
-                <Download size={18} /> Resume
-              </a>
-            )}
+            <ResumeLink />
           </Reveal>
         </div>
       </div>

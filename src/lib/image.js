@@ -32,6 +32,8 @@ const EXT = {
   'image/gif': 'gif',
   'image/svg+xml': 'svg',
   'application/pdf': 'pdf',
+  'application/msword': 'doc',
+  'application/vnd.openxmlformats-officedocument.wordprocessingml.document': 'docx',
 }
 
 /** "data:image/webp;base64,AAAA" -> { mime, ext, base64 }. Browsers always produce base64 data URLs. */
@@ -40,6 +42,14 @@ export function parseDataUrl(dataUrl) {
   if (!match) return null
   const [, mime, base64] = match
   return { mime, ext: EXT[mime] || 'bin', base64 }
+}
+
+/** A data: URL back into a Blob, so it can be opened in a tab (browsers block navigating to data: URLs). */
+export function dataUrlToBlob(dataUrl) {
+  const parsed = parseDataUrl(dataUrl)
+  if (!parsed) return null
+  const bytes = Uint8Array.from(atob(parsed.base64), (c) => c.charCodeAt(0))
+  return new Blob([bytes], { type: parsed.mime })
 }
 
 export const approxKB = (dataUrl) => Math.round((dataUrl.length * 3) / 4 / 1024)

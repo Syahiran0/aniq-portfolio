@@ -2,6 +2,7 @@ import { motion, useReducedMotion } from 'framer-motion'
 import { ArrowUpRight, ArrowRight } from 'lucide-react'
 import Cover from '../components/Cover'
 import { Silhouette } from '../components/Icons'
+import ResumeLink from '../components/ResumeLink'
 import { useContent } from '../content/store'
 import { asset } from '../lib/assets'
 import { scrollToId } from '../lib/hooks'
@@ -83,6 +84,7 @@ export default function Hero({ onConnect }) {
         </motion.p>
 
         <motion.div
+          className="hero__actions"
           initial={reduce ? false : { opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.7 }}
@@ -91,6 +93,7 @@ export default function Hero({ onConnect }) {
             {hero.connectLabel}
             <ArrowRight size={18} />
           </button>
+          <ResumeLink className="btn btn--ghost hero__cv" />
         </motion.div>
       </div>
 
