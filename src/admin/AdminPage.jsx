@@ -12,6 +12,7 @@ import {
   GraduationCap,
   Image,
   Layers,
+  LogOut,
   Mail,
   RotateCcw,
   Rocket,
@@ -34,7 +35,7 @@ const ICONS = { User, FileText, Sparkles, BarChart3, Layers, Trophy, BookOpen, S
 
 const PUBLISH = { id: 'publish', label: 'Publish', icon: 'Rocket' }
 
-export default function AdminPage() {
+export default function AdminPage({ onLogout }) {
   const content = useContent()
   const saveError = useSaveError()
   const [activeId, setActiveId] = useState(SECTIONS[0].id)
@@ -135,6 +136,11 @@ export default function AdminPage() {
             <button className="adm-btn adm-btn--primary adm-btn--sm" onClick={() => setActiveId('publish')}>
               <Rocket size={15} /> Publish
             </button>
+            {onLogout && (
+              <button className="adm-btn adm-btn--ghost adm-btn--sm" onClick={onLogout}>
+                <LogOut size={15} /> Log out
+              </button>
+            )}
           </div>
         </header>
 

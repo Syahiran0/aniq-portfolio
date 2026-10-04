@@ -3,8 +3,9 @@ import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import { useContent } from './content/store'
 import Home from './pages/Home'
 
-// The dashboard is code-split: visitors never download it.
-const AdminPage = lazy(() => import('./admin/AdminPage'))
+// The dashboard is code-split: visitors never download it. Only the small login gate is fetched
+// here, and the gate loads the dashboard itself once the server confirms the session.
+const AdminGate = lazy(() => import('./admin/AdminGate'))
 
 function useDocumentMeta() {
   const { site } = useContent()
@@ -46,7 +47,7 @@ export default function App() {
           path="/admin"
           element={
             <Suspense fallback={null}>
-              <AdminPage />
+              <AdminGate />
             </Suspense>
           }
         />

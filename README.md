@@ -25,13 +25,13 @@ src/
   sections/  Hero, Work, Achievements, About, Stories, Journey, Certifications, Skills, Leadership, Gallery, Connect
   components/ Cover, Modal, DetailModal, Reveal, Icons
   layout/    Nav, Footer, ConnectModal
-  admin/     the dashboard (schema.js describes every editable field)
+  admin/     the dashboard (schema.js describes every editable field) + AdminGate (login screen)
   lib/       github.js + publish.js (publish from the dashboard), image.js, hooks.js
 ```
 
 ## The dashboard
 
-Open `/#/admin`. Every page of the site is a form: edit, add, delete, duplicate and reorder entries, upload photos (they are resized in the browser automatically).
+Open `/#/admin` and sign in with the password from your `.env` file (see *Login* below). Every page of the site is a form: edit, add, delete, duplicate and reorder entries, upload photos (they are resized in the browser automatically).
 
 * Edits are saved as a **draft in your browser only**. Open the site in the same browser to preview them; a banner says *Previewing unpublished changes*. Visitors never see drafts.
 * **Publish** commits `content.json` (and any new images) to your GitHub repo in a single commit. GitHub then rebuilds and deploys the site (about a minute).
@@ -45,7 +45,20 @@ Open `/#/admin`. Every page of the site is a form: edit, add, delete, duplicate 
 2. Dashboard → **Publish** → enter your GitHub username, repo name, branch and paste the token.
 3. Click *Test connection*, then *Publish*.
 
-The token is stored only in that browser's `localStorage` and only sent to `api.github.com`. Anyone can open `/#/admin`, but without the token they can only change their own local draft, not your live site. Use *Forget token on this device* on shared computers.
+The token is stored only in that browser's `localStorage` and only sent to `api.github.com`. Use *Forget token on this device* on shared computers.
+
+### Login
+
+The dashboard sits behind a password that is checked **on the server** (Vercel functions in `api/`), never in the browser:
+
+* `ADMIN_PASSWORD` is the password you type. `SESSION_SECRET` (32+ random characters) signs the login cookie. Both live in `.env` (gitignored) locally and in Vercel's *Environment Variables* in production. See `.env.example`.
+* A correct password sets a 12-hour `HttpOnly`, `SameSite=Strict` cookie. The dashboard code is only downloaded after the server confirms it. Five wrong guesses from one address lock that address out for 15 minutes, and every wrong guess is delayed.
+* If the login service can't be reached (for example on GitHub Pages, which has no server) the dashboard stays closed.
+* The login stops strangers opening the editor. What actually protects your live site from being changed is the GitHub token above, which only you have.
+
+**Change the password:** edit `ADMIN_PASSWORD` in `.env`, then run `npm run env:push` and redeploy (`npx vercel deploy --prod`, or push a commit). Changing it also signs out every existing session.
+
+**Local development:** `npm run dev` serves the same `/api` functions and reads `.env`, so login works without the Vercel CLI.
 
 ### Adding a new field or section
 
@@ -57,12 +70,15 @@ No dashboard code needs to change.
 
 ## Deploying (free)
 
-**GitHub Pages (recommended — free, and the dashboard publishes to the same repo)**
+**Vercel (recommended — needed for the dashboard login)**
 
-1. Push this repo to GitHub (public repo; Pages on free accounts needs public).
-2. Repo → *Settings → Pages → Build and deployment → Source: **GitHub Actions***.
-3. Every push to `main` (including dashboard publishes) runs `.github/workflows/deploy.yml` and redeploys.
+1. Import the repo on Vercel (framework preset *Vite*, no settings to change), connected to GitHub so every push to `main`, including dashboard publishes, redeploys.
+2. Project → *Settings → Environment Variables*: add `ADMIN_PASSWORD` and `SESSION_SECRET` for *Production* (or run `npm run env:push` to copy them from `.env`).
+3. Redeploy once so the variables take effect.
 
-**Vercel (alternative)** — import the repo, framework preset *Vite*, no settings to change. It also redeploys on every push.
+**GitHub Pages (static site only)** — the public site works, but Pages has no server, so the dashboard login can't run there and `/#/admin` stays closed.
 
-Routing uses `HashRouter` and the build uses relative asset paths, so the same build works on both, on a sub-path (`user.github.io/repo/`), or on a custom domain.
+1. Repo → *Settings → Pages → Build and deployment → Source: **GitHub Actions***.
+2. Every push to `main` runs `.github/workflows/deploy.yml` and redeploys.
+
+Routing uses `HashRouter` and the build uses relative asset paths, so the same build works on Vercel, on a sub-path (`user.github.io/repo/`), or on a custom domain.

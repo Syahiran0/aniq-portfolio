@@ -703,3 +703,71 @@
     grid-template-columns: 84px 1fr;
   }
 }
+
+/* ---------- login ---------- */
+
+.adm-login {
+  display: grid;
+  min-height: 100dvh;
+  padding: 24px 16px;
+  place-items: center;
+  background: var(--bg);
+}
+
+.adm-login__card {
+  display: grid;
+  gap: 18px;
+  width: min(100%, 400px);
+  padding: clamp(24px, 6vw, 36px);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.adm-login__icon {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--accent) 16%, transparent);
+  color: var(--accent);
+}
+
+.adm-login__card h1 {
+  font-family: var(--font-pixel);
+  font-size: 1.7rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.adm-login__form {
+  display: grid;
+  gap: 16px;
+}
+
+.adm-login__form .adm-btn {
+  justify-content: center;
+  width: 100%;
+}
+
+.adm-login__status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.adm-login__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  justify-self: start;
+  color: var(--muted);
+  font-size: 0.85rem;
+  transition: color 0.2s;
+}
+
+.adm-login__back:hover {
+  color: var(--text);
+}
