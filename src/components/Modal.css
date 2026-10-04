@@ -48,7 +48,7 @@
 .detail__cover {
   aspect-ratio: 16 / 7;
   margin-top: -54px;
-  overflow: hidden;
+  overflow: clip; /* not "hidden": that would make the cover shrink to dodge the floated close button */
 }
 
 .detail__body {

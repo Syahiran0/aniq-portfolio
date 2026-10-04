@@ -10,6 +10,7 @@
   --step: clamp(20px, calc((50vw - var(--gutter) - var(--w) * 0.7) / ((var(--n, 8) - 1) / 2)), 148px);
   --tilt: 19deg; /* rotation of the outermost cards */
   position: relative;
+  isolation: isolate; /* a hovered card's z-index (200) stays inside the fan, so it can never rise above the modal (150) */
   height: calc(var(--w) * 1.25 + 90px);
   margin-bottom: clamp(40px, 6vw, 80px);
 }

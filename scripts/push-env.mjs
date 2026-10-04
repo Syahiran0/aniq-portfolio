@@ -33,15 +33,20 @@ if (env.SESSION_SECRET.length < 32) {
 }
 
 for (const name of NAMES) {
-  const run = spawnSync('npx', ['vercel', 'env', 'add', name, 'production', '--force'], {
+  // --sensitive --yes answer the CLI's "Secret or Config?" questions up front, so nothing is left to prompt for
+  const run = spawnSync(`npx vercel env add ${name} production --force --sensitive --yes --non-interactive`, {
     input: env[name],
-    stdio: ['pipe', 'inherit', 'inherit'],
-    shell: process.platform === 'win32',
+    encoding: 'utf8',
+    shell: true,
   })
-  if (run.status !== 0) {
-    console.error(`Could not set ${name} on Vercel. Run "npx vercel login" and "npx vercel link" first.`)
+  const output = `${run.stdout || ''}${run.stderr || ''}`
+  // the CLI can print an error and still exit 0, so the exit code alone isn't trusted
+  if (run.status !== 0 || /\berror\b/i.test(output) || !/(Overrode|Added)/.test(output)) {
+    console.error(output.trim())
+    console.error(`\nCould not set ${name} on Vercel. Run "npx vercel login" and "npx vercel link" first, then try again.`)
     process.exit(run.status || 1)
   }
+  console.log(`✓ ${name} saved to Vercel (Production)`)
 }
 
 console.log('\nDone. Redeploy for the change to apply:  npx vercel deploy --prod   (or push a commit)')
