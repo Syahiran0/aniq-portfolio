@@ -25,11 +25,11 @@
     "phone": "",
     "linkedin": "https://www.linkedin.com/in/ihtisyamsyahiran",
     "github": "https://github.com/Syahiran0",
-    "photo": "",
+    "photo": "uploads/1g8ec9125dz.webp",
     "availability": "Open to software & AI engineering roles"
   },
   "resume": {
-    "file": "",
+    "file": "uploads/1jtnqt4ed4.docx",
     "label": "Download CV"
   },
   "hero": {
@@ -41,15 +41,27 @@
     "tail": "that see, reason & ship.",
     "sub": "Final-year Information Systems student at UiTM, Google AI Ambassador and Gold Award winner (2× international, 1× national), leading a national-level AI infrastructure project.",
     "chipLabel": "AISe",
-    "chipImage": "",
+    "chipImage": "uploads/3918aq2rnr.webp",
     "connectLabel": "Connect",
     "scrollHint": "Scroll to enter selected work"
   },
   "stats": [
-    { "value": "3×", "label": "Gold Awards · 2 international, 1 national" },
-    { "value": "9", "label": "Awards, placements & honours" },
-    { "value": "3.65", "label": "CGPA · Dean's List" },
-    { "value": "2,000+", "label": "Attendees reached as promotion lead" }
+    {
+      "value": "3×",
+      "label": "Gold Awards · 2 international, 1 national"
+    },
+    {
+      "value": "9",
+      "label": "Awards, placements & honours"
+    },
+    {
+      "value": "3.65",
+      "label": "CGPA · Dean's List"
+    },
+    {
+      "value": "2,000+",
+      "label": "Attendees reached as promotion lead"
+    }
   ],
   "about": {
     "kicker": "About",
@@ -61,50 +73,41 @@
       "I'm passionate about building solutions that bridge practical needs with emerging technologies, and I'm looking for a software engineering or AI engineering role where I can ship things people use."
     ],
     "facts": [
-      { "label": "Based in", "value": "Shah Alam, Selangor, Malaysia" },
-      { "label": "Studying", "value": "BSc Information Systems Engineering (Big Data), UiTM" },
-      { "label": "CGPA", "value": "3.65 · Dean's List" },
-      { "label": "Languages", "value": "English, Malay" }
+      {
+        "label": "Based in",
+        "value": "Shah Alam, Selangor, Malaysia"
+      },
+      {
+        "label": "Studying",
+        "value": "BSc Information Systems Engineering (Big Data), UiTM"
+      },
+      {
+        "label": "CGPA",
+        "value": "3.65 · Dean's List"
+      },
+      {
+        "label": "Languages",
+        "value": "English, Malay"
+      }
     ]
   },
   "projects": [
     {
-      "id": "aise",
-      "title": "AISe",
-      "subtitle": "Intelligent Infrastructure Management Platform",
-      "role": "Team Lead",
-      "period": "Maker-Preneur National 2026",
-      "summary": "An AI platform that catches road damage early: potholes and cracks are detected from images, then turned into inspection reports, automated alerts and a chatbot that answers questions about past reports.",
+      "id": "muscle-maximus",
+      "title": "Muscle Maximus",
+      "subtitle": "Real-Time Gym Dashboard",
+      "role": "Designer & Developer",
+      "period": "",
+      "summary": "An interactive dashboard for a gym company with live calculations, member insights and operational tracking.",
       "bullets": [
-        "Led team Half Genius, one of two UiTM teams selected for Maker-Preneur National 2026, while building the application and system and coordinating the team's workstreams.",
-        "Detects potholes and road cracks with a trained YOLOv8 computer vision model, served by a FastAPI backend with a React.js interface.",
-        "Integrated an LLM to generate inspection summaries and reports and send automated alerts via email and Telegram, plus a RAG-based chatbot for querying reports.",
-        "Ran the prototype on edge hardware (Raspberry Pi 5, Hailo AI accelerator, AI camera) in a 3D-printed enclosure; pitched to judges and presented to the Deputy Secretary-General (Policy), Ministry of Higher Education."
+        "Designed and implemented an interactive dashboard enabling live calculations, member insights and operational tracking."
       ],
-      "stack": ["Python", "YOLOv8", "FastAPI", "React.js", "LLM", "RAG", "Agentic AI", "Raspberry Pi 5", "Hailo AI Accelerator"],
-      "cover": "",
-      "accent": "#ff6a1f",
-      "links": [
-        {
-          "label": "Read the UiTM NewsHub feature",
-          "url": "https://news.uitm.edu.my/2026/09/pasukan-half-genius-uitm-terpilih-ke-maker-preneur-national-2026/"
-        }
-      ]
-    },
-    {
-      "id": "sentinel",
-      "title": "Sentinel Infrastructure",
-      "subtitle": "Final Year Project",
-      "role": "Developer",
-      "period": "2026 – 2027",
-      "summary": "Automated anomaly detection and workflow for infrastructure: multiple AI agents with different tasks and tools monitor infrastructure, detect anomalies and automate the response.",
-      "bullets": [
-        "Final Year Project for the BSc (Hons.) Information Systems Engineering (Big Data Track) at UiTM Shah Alam.",
-        "Combines computer vision with multi-agent LLMs: each agent has its own task and tools, so the system can monitor, detect anomalies and trigger responses automatically."
+      "stack": [
+        "Oracle SQL",
+        "Oracle APEX App Builder"
       ],
-      "stack": ["Computer Vision", "Multi-Agent LLMs", "Python"],
       "cover": "",
-      "accent": "#2f6bff",
+      "accent": "#ff3d71",
       "links": []
     },
     {
@@ -120,8 +123,16 @@
         "Mentored the networking team on AI architecture and prompt engineering.",
         "Recognised by the lecturer as one of the best projects in the class."
       ],
-      "stack": ["Arduino Nano", "ESP32", "MPU6050", "MAX30100", "FastAPI", "Gemma 3 (1B)", "React.js"],
-      "cover": "",
+      "stack": [
+        "Arduino Nano",
+        "ESP32",
+        "MPU6050",
+        "MAX30100",
+        "FastAPI",
+        "Gemma 3 (1B)",
+        "React.js"
+      ],
+      "cover": "uploads/13ht0iq1gjz.webp",
       "accent": "#9b5cff",
       "links": []
     },
@@ -136,24 +147,42 @@
         "Presented with my team at iREx 2024 and awarded Gold in Category C, the category for higher institutions such as universities."
       ],
       "stack": [],
-      "cover": "",
+      "cover": "uploads/qpcyxj5ys7.webp",
       "accent": "#e5532d",
       "links": []
     },
     {
-      "id": "muscle-maximus",
-      "title": "Muscle Maximus",
-      "subtitle": "Real-Time Gym Dashboard",
-      "role": "Designer & Developer",
-      "period": "",
-      "summary": "An interactive dashboard for a gym company with live calculations, member insights and operational tracking.",
+      "id": "aise",
+      "title": "AISe",
+      "subtitle": "Intelligent Infrastructure Management Platform",
+      "role": "Team Lead",
+      "period": "Maker-Preneur National 2026",
+      "summary": "An AI platform that catches road damage early: potholes and cracks are detected from images, then turned into inspection reports, automated alerts and a chatbot that answers questions about past reports.",
       "bullets": [
-        "Designed and implemented an interactive dashboard enabling live calculations, member insights and operational tracking."
+        "Led team Half Genius, one of two UiTM teams selected for Maker-Preneur National 2026, while building the application and system and coordinating the team's workstreams.",
+        "Detects potholes and road cracks with a trained YOLO computer vision model, served by a FastAPI backend with a React.js interface.",
+        "Integrated an LLM to generate inspection summaries and reports and send automated alerts via email and Telegram, plus a RAG-based chatbot for querying reports.",
+        "Ran the prototype on edge hardware (Raspberry Pi 5, Hailo AI accelerator, AI camera) in a 3D-printed enclosure; pitched to judges and presented to the Deputy Secretary-General (Policy), Ministry of Higher Education."
       ],
-      "stack": ["Oracle SQL", "Oracle APEX App Builder"],
-      "cover": "",
-      "accent": "#ff3d71",
-      "links": []
+      "stack": [
+        "Python",
+        "YOLO",
+        "FastAPI",
+        "React.js",
+        "LLM",
+        "RAG",
+        "Agentic AI",
+        "Raspberry Pi 5",
+        "Hailo AI Accelerator"
+      ],
+      "cover": "uploads/139lihv2v9v.webp",
+      "accent": "#ff6a1f",
+      "links": [
+        {
+          "label": "Read the UiTM NewsHub feature",
+          "url": "https://news.uitm.edu.my/2026/09/pasukan-half-genius-uitm-terpilih-ke-maker-preneur-national-2026/"
+        }
+      ]
     },
     {
       "id": "ai-image-gen",
@@ -165,24 +194,12 @@
       "bullets": [
         "Developed an image generation pipeline integrating Stable Diffusion with a FastAPI interface, providing a smooth workflow for AI-powered creative outputs."
       ],
-      "stack": ["Stable Diffusion", "FastAPI"],
+      "stack": [
+        "Stable Diffusion",
+        "FastAPI"
+      ],
       "cover": "",
       "accent": "#12b886",
-      "links": []
-    },
-    {
-      "id": "motionmate",
-      "title": "MotionMate",
-      "subtitle": "Running Application",
-      "role": "Developer",
-      "period": "",
-      "summary": "A fitness app with user authentication that tracks pace, distance and time to improve the experience of runners.",
-      "bullets": [
-        "Developed and launched a fitness app with user authentication that tracks pace, distance and time to enhance the experience of runners."
-      ],
-      "stack": ["MIT App Inventor", "Firebase"],
-      "cover": "",
-      "accent": "#f5a524",
       "links": []
     },
     {
@@ -195,30 +212,41 @@
       "bullets": [
         "Engineered an IoT system that monitors soil moisture, rain, light and temperature to support smarter plant care and healthier growth."
       ],
-      "stack": ["ESP32", "Sensors"],
+      "stack": [
+        "ESP32",
+        "Sensors"
+      ],
       "cover": "",
       "accent": "#3bb273",
+      "links": []
+    },
+    {
+      "id": "motionmate",
+      "title": "MotionMate",
+      "subtitle": "Running Application",
+      "role": "Developer",
+      "period": "",
+      "summary": "A fitness app with user authentication that tracks pace, distance and time to improve the experience of runners.",
+      "bullets": [
+        "Developed and launched a fitness app with user authentication that tracks pace, distance and time to enhance the experience of runners."
+      ],
+      "stack": [
+        "MIT App Inventor",
+        "Firebase"
+      ],
+      "cover": "",
+      "accent": "#f5a524",
       "links": []
     }
   ],
   "achievements": [
-    {
-      "id": "nismec-2026",
-      "rank": "Gold",
-      "title": "National Innovation & Sustainability Melati Challenge (NISMEC) 2026",
-      "date": "Jun 2026",
-      "description": "National Gold Award at NISMEC 2026, organised by Kolej Kediaman Melati, UiTM.",
-      "image": "",
-      "accent": "#ff7a1a",
-      "highlight": true
-    },
     {
       "id": "maker-preneur-2026",
       "rank": "National",
       "title": "Maker-Preneur National 2026",
       "date": "Aug 2026",
       "description": "One of only two UiTM teams on the national stage. Pitched at Universiti Malaya on 9 August and presented AISe to the Deputy Secretary-General (Policy), Ministry of Higher Education, on 10 August.",
-      "image": "",
+      "image": "uploads/azfkhu2mhn.webp",
       "accent": "#3b6dff",
       "highlight": true
     },
@@ -228,7 +256,7 @@
       "title": "International Student Invention Innovation Development Exhibition Competition (i-SIIDEC) 2024",
       "date": "Aug 2024",
       "description": "International Gold Award at i-SIIDEC 2024, open to secondary schools and undergraduates from national and international universities.",
-      "image": "",
+      "image": "uploads/fvagb35073.webp",
       "accent": "#e8a400",
       "highlight": true
     },
@@ -238,8 +266,18 @@
       "title": "International Industrial Revolution 4.0 Exhibition (iREx) 2024",
       "date": "May 2024",
       "description": "International Gold Award in Category C (higher institutions) for RazorVation, my diploma final-year project.",
-      "image": "",
+      "image": "uploads/2lrzvm1z37.webp",
       "accent": "#e5532d",
+      "highlight": true
+    },
+    {
+      "id": "nismec-2026",
+      "rank": "Gold",
+      "title": "National Innovation & Sustainability Melati Challenge (NISMEC) 2026",
+      "date": "Jun 2026",
+      "description": "National Gold Award at NISMEC 2026, organised by Kolej Kediaman Melati, UiTM.",
+      "image": "uploads/vdrngf2y8j.webp",
+      "accent": "#ff7a1a",
       "highlight": true
     },
     {
@@ -445,7 +483,17 @@
       "degree": "Diploma in Computer Science",
       "school": "Universiti Teknologi MARA (UiTM), Kedah",
       "period": "Oct 2022 – Feb 2025",
-      "details": ["Final CGPA: 3.53", "Final-year project: RazorVation, Gold at iREx 2024"]
+      "details": [
+        "Final CGPA: 3.53",
+        "Final-year project: RazorVation, Gold at iREx 2024"
+      ]
+    },
+    {
+      "degree": "",
+      "school": "",
+      "period": "",
+      "details": [],
+      "id": "item-4m6h8k"
     }
   ],
   "certifications": [
@@ -511,20 +559,71 @@
     }
   ],
   "skills": [
-    { "group": "Languages", "items": ["Python", "JavaScript", "Java", "R", "SQL"] },
+    {
+      "group": "Languages",
+      "items": [
+        "Python",
+        "JavaScript",
+        "Java",
+        "R",
+        "SQL"
+      ]
+    },
     {
       "group": "AI & Machine Learning",
-      "items": ["Computer Vision (YOLOv8)", "LLMs", "RAG", "Agentic AI / Multi-Agent LLMs", "Prompt Engineering", "Edge AI", "Hugging Face", "Stable Diffusion"]
+      "items": [
+        "Computer Vision (YOLOv8)",
+        "LLMs",
+        "RAG",
+        "Agentic AI / Multi-Agent LLMs",
+        "Prompt Engineering",
+        "Edge AI",
+        "Hugging Face",
+        "Stable Diffusion"
+      ]
     },
-    { "group": "Web & Backend", "items": ["React.js", "FastAPI", "REST APIs", "Oracle APEX", "Firebase"] },
+    {
+      "group": "Web & Backend",
+      "items": [
+        "React.js",
+        "FastAPI",
+        "REST APIs",
+        "Oracle APEX",
+        "Firebase"
+      ]
+    },
     {
       "group": "Tools & Platforms",
-      "items": ["Docker", "Linux", "Git", "GitHub", "Raspberry Pi 5", "ESP32", "Arduino", "MIT App Inventor"]
+      "items": [
+        "Docker",
+        "Linux",
+        "Git",
+        "GitHub",
+        "Raspberry Pi 5",
+        "ESP32",
+        "Arduino",
+        "MIT App Inventor"
+      ]
     },
-    { "group": "Design & Productivity", "items": ["Figma", "Canva", "Adobe Photoshop", "CapCut", "Microsoft Office"] },
+    {
+      "group": "Design & Productivity",
+      "items": [
+        "Figma",
+        "Canva",
+        "Adobe Photoshop",
+        "CapCut",
+        "Microsoft Office"
+      ]
+    },
     {
       "group": "Soft Skills",
-      "items": ["Team Leadership", "Communication", "Pitching & Presentation", "Problem Solving", "Collaboration"]
+      "items": [
+        "Team Leadership",
+        "Communication",
+        "Pitching & Presentation",
+        "Problem Solving",
+        "Collaboration"
+      ]
     }
   ],
   "leadership": [
@@ -532,7 +631,7 @@
       "id": "google-ai-ambassador",
       "role": "Google AI Ambassador",
       "org": "UiTM",
-      "period": "",
+      "period": "2026",
       "detail": ""
     },
     {
@@ -543,16 +642,9 @@
       "detail": "My final event with JSP UiTM Shah Alam."
     },
     {
-      "id": "yss-2026",
-      "role": "Final-stage interview",
-      "org": "Yayasan Sukarelawan Siswa (YSS), Putrajaya",
-      "period": "Jan 2026",
-      "detail": "Represented UiTM Shah Alam at the final-stage interview."
-    },
-    {
       "id": "media-volunteer-2026",
       "role": "Media Team Volunteer",
-      "org": "UiTM",
+      "org": " Super UiTM",
       "period": "Apr 2026",
       "detail": "Produced 300+ graphic assets (100+ winner graphics, 200+ schedule posters) and photographed a 3-day national-level tournament."
     },
@@ -571,6 +663,20 @@
       "detail": "Managed accreditation, accommodation and athlete logistics across a 58-agency tournament (contingent placed 3rd overall), and supported the UiTM contingent's 8th consecutive overall championship at MASUM."
     },
     {
+      "id": "yss-2026",
+      "role": "Final-stage interview",
+      "org": "Yayasan Sukarelawan Siswa (YSS), Putrajaya",
+      "period": "Jan 2026",
+      "detail": "Represented UiTM Shah Alam at the final-stage interview."
+    },
+    {
+      "id": "cycom-2024",
+      "role": "Head of Multimedia & Publicity · Head of Multimedia",
+      "org": "Computer Science Club (CYCOM), UiTM Kedah · JSP UiTM Kedah",
+      "period": "2024",
+      "detail": "Designed banners, posters and decks and ran the club's Instagram for Road to Degree, STEAMFest and the AGM; led media for KARiSMA 2024, SAF 2024 and cultural programmes."
+    },
+    {
       "id": "exco-jsp",
       "role": "Welfare Executive Committee (EXCO) · Multimedia Committee",
       "org": "Jawatankuasa Sukan Pelajar (JSP), UiTM Shah Alam · SUPER UiTM Shah Alam",
@@ -579,7 +685,7 @@
     },
     {
       "id": "volunteer-2025",
-      "role": "Volunteer / Official · Timekeeper",
+      "role": "Volunteer / Official ",
       "org": "SUKOL, SASSA, Lions League UiTM Shah Alam · BTBS 2.0 Swim Gala",
       "period": "2025",
       "detail": "Head Volunteer for table tennis, volleyball scorekeeper, badminton linesman, and lane timekeeper for 69 swim events and nearly 200 participants."
@@ -590,13 +696,6 @@
       "org": "Modul Kepimpinan Profesional (MKP), Modul Kepimpinan Dinamik (MKD), JomHack",
       "period": "2025",
       "detail": "Represented JSP."
-    },
-    {
-      "id": "cycom-2024",
-      "role": "Head of Multimedia & Publicity · Head of Multimedia",
-      "org": "Computer Science Club (CYCOM), UiTM Kedah · JSP UiTM Kedah",
-      "period": "2024",
-      "detail": "Designed banners, posters and decks and ran the club's Instagram for Road to Degree, STEAMFest and the AGM; led media for KARiSMA 2024, SAF 2024 and cultural programmes."
     },
     {
       "id": "exco-technical-2023",
@@ -613,7 +712,43 @@
       "detail": "Represented UiTM Kedah at KARiSMA, SAF and SUKOL."
     }
   ],
-  "gallery": [],
+  "gallery": [
+    {
+      "image": "uploads/1cetl9d2bx3.webp",
+      "caption": "",
+      "id": "item-s9ms2m"
+    },
+    {
+      "image": "uploads/18f4n943a03.webp",
+      "caption": "",
+      "id": "item-0lysja"
+    },
+    {
+      "image": "uploads/9qc2h93ncv.webp",
+      "caption": "",
+      "id": "item-fxct02"
+    },
+    {
+      "image": "uploads/n4w0ix60cb.webp",
+      "caption": "",
+      "id": "item-b98mla"
+    },
+    {
+      "image": "uploads/1e27t9g3mur.webp",
+      "caption": "",
+      "id": "item-fqr0m8"
+    },
+    {
+      "image": "uploads/1vqhyuu2prr.webp",
+      "caption": "",
+      "id": "item-sj433j"
+    },
+    {
+      "image": "uploads/1tny02y62x7.webp",
+      "caption": "",
+      "id": "item-p92gbi"
+    }
+  ],
   "connect": {
     "title": "Let's build something that matters.",
     "text": "I'm open to software engineering and AI engineering roles, collaborations and good conversations about edge AI. The fastest way to reach me is email.",
